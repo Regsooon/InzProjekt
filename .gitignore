@@ -18,6 +18,7 @@
 bin/
 gen/
 out/
+release/
 
 # Gradle files
 .gradle/
@@ -259,6 +260,8 @@ cmake-build-*/
 *.zip
 *.tar.gz
 *.rar
+
+map_key.xml
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 
