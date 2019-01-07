@@ -1,10 +1,10 @@
 package com.tregula.graedukacyjna;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
-import com.tregula.graedukacyjna.map.MapFragment;
 import com.tregula.graedukacyjna.question.QuestionFragment;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
