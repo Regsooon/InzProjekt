@@ -1,12 +1,13 @@
 package com.tregula.graedukacyjna.view.question;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.tregula.graedukacyjna.R;
+
+import androidx.annotation.Nullable;
 
 public class QuestionView extends LinearLayout {
 
