@@ -6,6 +6,7 @@ import android.content.Context;
 import com.tregula.graedukacyjna.di.module.ApplicationDependencies;
 import com.tregula.graedukacyjna.di.module.ConcurrentDependencies;
 import com.tregula.graedukacyjna.domain.concurrent.GameSchedulers;
+import com.tregula.graedukacyjna.domain.database.CapitolsDatabase;
 
 public class EducationDependencyGraph implements DependencyGraph {
 
@@ -25,5 +26,10 @@ public class EducationDependencyGraph implements DependencyGraph {
     @Override
     public GameSchedulers provideGameSchedulers() {
         return concurrentDependencies.schedulers();
+    }
+
+    @Override
+    public CapitolsDatabase provideCapitolsDatabase() {
+        return applicationDependencies.getCapitolsDatabase();
     }
 }
