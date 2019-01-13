@@ -15,14 +15,11 @@ import io.reactivex.Single;
 public interface CountriesDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertCountries(List<CountryEntity> countries);
+    void insert(List<CountryEntity> countries);
 
-    @Query("SELECT * FROM countries WHERE countryName LIKE :name")
+    @Query("SELECT * FROM countries WHERE name LIKE :name")
     Single<CountryEntity> loadByName(String name);
 
-    @Query("SELECT * FROM countries ORDER BY id ASC")
+    @Query("SELECT * FROM countries ORDER BY name ASC")
     Single<List<CountryEntity>> getCountries();
-
-    @Query("SELECT * FROM countries WHERE continentId = :continentId ")
-    Single<List<CountryEntity>> getCountriesForContinet(int continentId);
 }
