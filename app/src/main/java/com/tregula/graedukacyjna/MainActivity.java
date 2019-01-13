@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, new QuestionFragment())
-                .addToBackStack(null)
                 .commitAllowingStateLoss();
     }
 }
