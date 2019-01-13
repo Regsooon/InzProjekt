@@ -32,20 +32,25 @@ ext {
     mapsVersion = '16.0.0'
     constraintVersion = '1.1.3'
     roomVersion = '2.0.0'
-    firebaseVersion = '16.0.6'
+    firebaseCoreVersion = '16.0.6'
+    firebaseStorageVersion = '16.0.5'
+    moshiVersion = '1.8.0'
 }
 
 dependencies {
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
     implementation "com.android.support.constraint:constraint-layout:$constraintVersion"
     implementation "com.google.android.gms:play-services-maps:$mapsVersion"
+    implementation "com.squareup.moshi:moshi:$moshiVersion"
 
     implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+
+    implementation "com.google.firebase:firebase-core:$firebaseCoreVersion"
+    implementation "com.google.firebase:firebase-storage:$firebaseStorageVersion"
+
     implementation "androidx.room:room-runtime:$roomVersion"
     implementation "androidx.room:room-rxjava2:$roomVersion"
-
-    implementation "com.google.firebase:firebase-core:$firebaseVersion"
     annotationProcessor "androidx.room:room-compiler:$roomVersion"
 }
 

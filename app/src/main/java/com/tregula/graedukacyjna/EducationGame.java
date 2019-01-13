@@ -1,13 +1,18 @@
 package com.tregula.graedukacyjna;
 
 import android.app.Application;
+import android.content.Context;
 
-import com.tregula.graedukacyjna.di.DependencyGraph;
 import com.tregula.graedukacyjna.di.ApplicationComponentBuilder;
+import com.tregula.graedukacyjna.di.DependencyGraph;
 
-public class GraEdukacyjna extends Application {
+public class EducationGame extends Application {
 
     private DependencyGraph dependencyGraph;
+
+    public static EducationGame getInstance(Context context) {
+        return (EducationGame) context.getApplicationContext();
+    }
 
     @Override
     public void onCreate() {
