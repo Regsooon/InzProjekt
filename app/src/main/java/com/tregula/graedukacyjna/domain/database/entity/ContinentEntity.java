@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 public class ContinentEntity {
 
     @PrimaryKey(autoGenerate = true)
-    public Integer id;
+    public Long id;
     public final String name;
     public final String location;
     public final String wiki;

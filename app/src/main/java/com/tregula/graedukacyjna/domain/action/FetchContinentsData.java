@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.domain;
+package com.tregula.graedukacyjna.domain.action;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;

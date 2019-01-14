@@ -14,7 +14,7 @@ import io.reactivex.Single;
 public interface ContinentDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insert(List<ContinentEntity> continents);
+    long insert(ContinentEntity continent);
 
     @Query("SELECT * from continents")
     Single<List<ContinentEntity>> getContinents();
