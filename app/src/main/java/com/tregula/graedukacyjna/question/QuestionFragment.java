@@ -6,12 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tregula.graedukacyjna.R;
+import com.tregula.graedukacyjna.base.InjectedFragment;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
-public class QuestionFragment extends Fragment {
+public class QuestionFragment extends InjectedFragment {
 
     @Nullable
     @Override

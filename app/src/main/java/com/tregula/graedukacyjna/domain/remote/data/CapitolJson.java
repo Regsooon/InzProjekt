@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.domain.remote;
+package com.tregula.graedukacyjna.domain.remote.data;
 
 public class CapitolJson {
     public String capitol_name;
