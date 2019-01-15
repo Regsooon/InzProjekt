@@ -1,28 +1,32 @@
 package com.tregula.graedukacyjna;
 
+import android.app.Activity;
 import android.app.Application;
-import android.content.Context;
 
-import com.tregula.graedukacyjna.di.ApplicationComponentBuilder;
-import com.tregula.graedukacyjna.di.DependencyGraph;
+import com.tregula.graedukacyjna.composition.DaggerAppComponent;
 
-public class EducationGame extends Application {
+import javax.inject.Inject;
 
-    private DependencyGraph dependencyGraph;
+import dagger.android.AndroidInjector;
+import dagger.android.DispatchingAndroidInjector;
+import dagger.android.HasActivityInjector;
 
-    public static EducationGame getInstance(Context context) {
-        return (EducationGame) context.getApplicationContext();
-    }
+public class EducationGame extends Application implements HasActivityInjector {
+
+    @Inject
+    DispatchingAndroidInjector<Activity> activityInjector;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        dependencyGraph = new ApplicationComponentBuilder()
+        DaggerAppComponent.builder()
                 .application(this)
-                .build();
+                .build()
+                .inject(this);
     }
 
-    public DependencyGraph dependencyGraph() {
-        return dependencyGraph;
+    @Override
+    public AndroidInjector<Activity> activityInjector() {
+        return activityInjector;
     }
 }

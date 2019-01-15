@@ -2,11 +2,10 @@ package com.tregula.graedukacyjna;
 
 import android.os.Bundle;
 
+import com.tregula.graedukacyjna.base.InjectedActivity;
 import com.tregula.graedukacyjna.question.QuestionFragment;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends InjectedActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

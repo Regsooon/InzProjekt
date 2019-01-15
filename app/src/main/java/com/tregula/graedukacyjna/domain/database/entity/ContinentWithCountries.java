@@ -7,9 +7,9 @@ import androidx.room.Relation;
 
 public class ContinentWithCountries {
     @Embedded
-    public ContinentEntity continent;
+    public Continent continent;
 
     @Relation(parentColumn = "id",
             entityColumn = "continentId")
-    public List<CountryEntity> countries;
+    public List<Country> countries;
 }

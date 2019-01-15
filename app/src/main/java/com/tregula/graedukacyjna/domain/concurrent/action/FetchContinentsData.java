@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.domain.action;
+package com.tregula.graedukacyjna.domain.concurrent.action;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -6,10 +6,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.moshi.Moshi;
-import com.tregula.graedukacyjna.domain.remote.ContinentsJson;
+import com.tregula.graedukacyjna.domain.remote.data.ContinentsJson;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
+
+import javax.inject.Inject;
 
 import io.reactivex.Single;
 import io.reactivex.SingleEmitter;
@@ -23,6 +25,7 @@ public class FetchContinentsData {
     private final FirebaseStorage storage;
     private final Moshi moshi;
 
+    @Inject
     public FetchContinentsData(FirebaseStorage storage, Moshi moshi) {
         this.storage = storage;
         this.moshi = moshi;

@@ -9,23 +9,24 @@ import androidx.room.PrimaryKey;
                 @Index(value = {"name"}, unique = true),
                 @Index("continentId")
         })
-public class CountryEntity {
+public class Country {
 
     @PrimaryKey(autoGenerate = true)
     public Long id;
     public final String name;
-    public final String location;
+    public final Location location;
     public final String capitolName;
-    public final String capitolLocation;
+    public final Location capitolLocation;
     public final String wiki;
-    public final Long continentId;
+    public final String capitolWiki;
+    public Long continentId;
 
-    public CountryEntity(String name, String location, String capitolName, String capitolLocation, String wiki, Long continentId) {
+    public Country(String name, Location location, String capitolName, Location capitolLocation, String wiki, String capitolWiki) {
         this.name = name;
         this.location = location;
         this.capitolName = capitolName;
         this.capitolLocation = capitolLocation;
         this.wiki = wiki;
-        this.continentId = continentId;
+        this.capitolWiki = capitolWiki;
     }
 }

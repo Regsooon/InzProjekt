@@ -1,6 +1,6 @@
 package com.tregula.graedukacyjna.domain.database.dao;
 
-import com.tregula.graedukacyjna.domain.database.entity.ContinentEntity;
+import com.tregula.graedukacyjna.domain.database.entity.Continent;
 
 import java.util.List;
 
@@ -14,10 +14,10 @@ import io.reactivex.Single;
 public interface ContinentDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    long insert(ContinentEntity continent);
+    long insert(Continent continent);
 
     @Query("SELECT * from continents")
-    Single<List<ContinentEntity>> getContinents();
+    Single<List<Continent>> getContinents();
 
     @Query("DELETE FROM continents")
     void removeContinents();
