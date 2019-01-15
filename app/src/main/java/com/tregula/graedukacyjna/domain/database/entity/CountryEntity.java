@@ -18,7 +18,7 @@ public class CountryEntity {
     public final String capitolName;
     public final String capitolLocation;
     public final String wiki;
-    public final Long continentId;
+    public Long continentId;
 
     public CountryEntity(String name, String location, String capitolName, String capitolLocation, String wiki, Long continentId) {
         this.name = name;

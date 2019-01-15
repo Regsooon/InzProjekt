@@ -12,7 +12,7 @@ import io.reactivex.Completable;
 import io.reactivex.Single;
 
 @Dao
-public interface CountriesDao {
+public interface CountryDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(List<CountryEntity> countries);
