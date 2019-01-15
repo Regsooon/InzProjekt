@@ -5,15 +5,15 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "continents", indices = @Index(value = "name", unique = true))
-public class ContinentEntity {
+public class Continent {
 
     @PrimaryKey(autoGenerate = true)
     public Long id;
     public final String name;
-    public final String location;
+    public final Location location;
     public final String wiki;
 
-    public ContinentEntity(String name, String location, String wiki) {
+    public Continent(String name, Location location, String wiki) {
         this.name = name;
         this.location = location;
         this.wiki = wiki;

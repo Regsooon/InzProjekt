@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "2c44c32df77567bfec75aacfff775d1b",
+    "identityHash": "a0601cc8d257f5f2d2ea49967f06fd5b",
     "entities": [
       {
         "tableName": "continents",
@@ -53,7 +53,7 @@
       },
       {
         "tableName": "countries",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT, `location` TEXT, `capitolName` TEXT, `capitolLocation` TEXT, `wiki` TEXT, `continentId` INTEGER)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT, `location` TEXT, `capitolName` TEXT, `capitolLocation` TEXT, `wiki` TEXT, `capitolWiki` TEXT, `continentId` INTEGER)",
         "fields": [
           {
             "fieldPath": "id",
@@ -88,6 +88,12 @@
           {
             "fieldPath": "wiki",
             "columnName": "wiki",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "capitolWiki",
+            "columnName": "capitolWiki",
             "affinity": "TEXT",
             "notNull": false
           },
@@ -127,7 +133,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"2c44c32df77567bfec75aacfff775d1b\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"a0601cc8d257f5f2d2ea49967f06fd5b\")"
     ]
   }
 }

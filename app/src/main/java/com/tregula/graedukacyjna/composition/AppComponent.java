@@ -5,6 +5,7 @@ import android.app.Application;
 import com.tregula.graedukacyjna.EducationGame;
 import com.tregula.graedukacyjna.composition.module.ApplicationModule;
 import com.tregula.graedukacyjna.composition.module.ConcurrentModule;
+import com.tregula.graedukacyjna.composition.module.ConvertersModule;
 import com.tregula.graedukacyjna.composition.module.DatabaseModule;
 import com.tregula.graedukacyjna.composition.module.FragmentBindingModule;
 
@@ -17,7 +18,8 @@ import dagger.android.support.AndroidSupportInjectionModule;
         ApplicationModule.class,
         FragmentBindingModule.class,
         ConcurrentModule.class,
-        DatabaseModule.class
+        DatabaseModule.class,
+        ConvertersModule.class
 })
 public interface AppComponent {
 

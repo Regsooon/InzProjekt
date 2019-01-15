@@ -1,10 +1,10 @@
-package com.tregula.graedukacyjna.domain.action;
+package com.tregula.graedukacyjna.domain.concurrent.action;
 
 import com.tregula.graedukacyjna.base.converter.Converter;
 import com.tregula.graedukacyjna.domain.database.dao.ContinentDao;
 import com.tregula.graedukacyjna.domain.database.dao.CountryDao;
-import com.tregula.graedukacyjna.domain.database.entity.ContinentEntity;
-import com.tregula.graedukacyjna.domain.database.entity.CountryEntity;
+import com.tregula.graedukacyjna.domain.database.entity.Continent;
+import com.tregula.graedukacyjna.domain.database.entity.Country;
 import com.tregula.graedukacyjna.domain.remote.ContinentJson;
 import com.tregula.graedukacyjna.domain.remote.ContinentsJson;
 import com.tregula.graedukacyjna.domain.remote.CountryJson;
@@ -22,14 +22,14 @@ public class PopulateDatabaseWithContinents {
 
     private final ContinentDao continentDao;
     private final CountryDao countryDao;
-    private final Converter<ContinentJson, ContinentEntity> continentConverter;
-    private final Converter<CountryJson, CountryEntity> countryConverter;
+    private final Converter<ContinentJson, Continent> continentConverter;
+    private final Converter<CountryJson, Country> countryConverter;
 
     @Inject
     public PopulateDatabaseWithContinents(ContinentDao continentDao,
                                           CountryDao countryDao,
-                                          Converter<ContinentJson, ContinentEntity> continentConverter,
-                                          Converter<CountryJson, CountryEntity> countryConverter) {
+                                          Converter<ContinentJson, Continent> continentConverter,
+                                          Converter<CountryJson, Country> countryConverter) {
         this.continentDao = continentDao;
         this.countryDao = countryDao;
         this.continentConverter = continentConverter;
@@ -41,14 +41,14 @@ public class PopulateDatabaseWithContinents {
             @Override
             public void subscribe(CompletableEmitter emitter) {
                 for (ContinentJson continentJson : continentsJson.continents) {
-                    ContinentEntity continentEntity = continentConverter.convert(continentJson);
-                    long continentId = continentDao.insert(continentEntity);
-                    List<CountryEntity> countryEntities = new ArrayList<>();
+                    Continent continent = continentConverter.convert(continentJson);
+                    long continentId = continentDao.insert(continent);
+                    List<Country> countryEntities = new ArrayList<>();
 
                     for (CountryJson countryJson : continentJson.countries) {
-                        CountryEntity countryEntity = countryConverter.convert(countryJson);
-                        countryEntity.continentId = continentId;
-                        countryEntities.add(countryEntity);
+                        Country country = countryConverter.convert(countryJson);
+                        country.continentId = continentId;
+                        countryEntities.add(country);
                     }
                     countryDao.insert(countryEntities);
                 }
