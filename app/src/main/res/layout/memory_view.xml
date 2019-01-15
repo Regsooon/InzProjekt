@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="3"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:rowCount="6"
+    android:alignmentMode="alignMargins"
+    android:useDefaultMargins="true">
+
+
+    <Button
+        android:id="@+id/memory18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/memory1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+</GridLayout>

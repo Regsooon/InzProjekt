@@ -2,16 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    >
 
-
-    <TextView
+    <Button
+        android:id="@+id/learn_mode_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Jaka jest stolica ..."/>
+        android:text="Nauka" />
 
-    <com.tregula.graedukacyjna.view.question.QuestionView
+    <Button
+        android:id="@+id/test_mode_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="wrap_content"
+        android:text="Test" />
 </LinearLayout>
