@@ -3,7 +3,7 @@ package com.tregula.graedukacyjna.domain.database.entity.converter;
 import com.tregula.graedukacyjna.base.converter.Converter;
 import com.tregula.graedukacyjna.domain.database.entity.Continent;
 import com.tregula.graedukacyjna.domain.database.entity.Location;
-import com.tregula.graedukacyjna.domain.remote.ContinentJson;
+import com.tregula.graedukacyjna.domain.remote.data.ContinentJson;
 
 public class ContinentConverter implements Converter<ContinentJson, Continent> {
 

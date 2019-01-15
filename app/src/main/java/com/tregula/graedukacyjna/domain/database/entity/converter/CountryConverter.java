@@ -3,8 +3,8 @@ package com.tregula.graedukacyjna.domain.database.entity.converter;
 import com.tregula.graedukacyjna.base.converter.Converter;
 import com.tregula.graedukacyjna.domain.database.entity.Country;
 import com.tregula.graedukacyjna.domain.database.entity.Location;
-import com.tregula.graedukacyjna.domain.remote.CapitolJson;
-import com.tregula.graedukacyjna.domain.remote.CountryJson;
+import com.tregula.graedukacyjna.domain.remote.data.CapitolJson;
+import com.tregula.graedukacyjna.domain.remote.data.CountryJson;
 
 public class CountryConverter implements Converter<CountryJson, Country> {
 
