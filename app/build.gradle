@@ -35,6 +35,7 @@ ext {
     firebaseCoreVersion = '16.0.6'
     firebaseStorageVersion = '16.0.5'
     moshiVersion = '1.8.0'
+    daggerVersion = '2.20'
 }
 
 dependencies {
@@ -52,6 +53,12 @@ dependencies {
     implementation "androidx.room:room-runtime:$roomVersion"
     implementation "androidx.room:room-rxjava2:$roomVersion"
     annotationProcessor "androidx.room:room-compiler:$roomVersion"
+
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
 }
 
 apply plugin: 'com.google.gms.google-services'
