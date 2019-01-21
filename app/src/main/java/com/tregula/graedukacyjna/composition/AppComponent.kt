@@ -13,7 +13,9 @@ import dagger.android.support.AndroidSupportInjectionModule
     FragmentBindingModule::class,
     ConcurrentModule::class,
     DatabaseModule::class,
-    ConvertersModule::class])
+    ConvertersModule::class,
+    ServiceBindingModule::class
+])
 interface AppComponent {
 
     @Component.Builder

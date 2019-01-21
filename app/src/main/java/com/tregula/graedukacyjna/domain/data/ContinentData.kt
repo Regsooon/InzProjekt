@@ -4,18 +4,16 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.tregula.graedukacyjna.domain.database.entity.Location
 
-data class ContinentData(
-    val name: String = "",
-    val location: Location = Location.DEFAULT,
-    val wiki: String = "",
-    val countries: List<CountryData>
-) : Parcelable {
+data class ContinentData(val name: String = "",
+                         val location: Location = Location.DEFAULT,
+                         val wiki: String = "",
+                         val countries: List<CountryData> = emptyList()) : Parcelable {
 
     constructor(parcel: Parcel) : this(
-        parcel.readString(),
-        parcel.readParcelable(Location::class.java.classLoader),
-        parcel.readString(),
-        parcel.createTypedArrayList(CountryData)
+            parcel.readString(),
+            parcel.readParcelable(Location::class.java.classLoader),
+            parcel.readString(),
+            parcel.createTypedArrayList(CountryData)
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
