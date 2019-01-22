@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.domain.concurrent.action
+package com.tregula.graedukacyjna.concurrent.action
 
 import com.tregula.graedukacyjna.base.converter.Converter
 import com.tregula.graedukacyjna.domain.database.dao.ContinentDao

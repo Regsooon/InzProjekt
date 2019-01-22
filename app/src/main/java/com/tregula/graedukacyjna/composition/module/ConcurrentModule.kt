@@ -1,7 +1,7 @@
 package com.tregula.graedukacyjna.composition.module
 
-import com.tregula.graedukacyjna.domain.concurrent.EducationGameSchedulers
-import com.tregula.graedukacyjna.domain.concurrent.GameSchedulers
+import com.tregula.graedukacyjna.concurrent.EducationGameSchedulers
+import com.tregula.graedukacyjna.concurrent.GameSchedulers
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
