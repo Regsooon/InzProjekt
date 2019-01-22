@@ -28,7 +28,6 @@ class UpdateApplicationService : IntentService(UpdateApplicationService::class.j
     override fun onHandleIntent(intent: Intent?) {
         val fetchDisposable = fetchContinentsData.execute()
                 .subscribeOn(gameSchedulers.io())
-                .observeOn(gameSchedulers.main())
                 .flatMapCompletable { continentsJson ->
                     populateDatabaseWithContinents.execute(continentsJson)
                 }.subscribe()
