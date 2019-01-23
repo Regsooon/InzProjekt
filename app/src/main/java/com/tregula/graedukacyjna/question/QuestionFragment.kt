@@ -11,6 +11,6 @@ import com.tregula.graedukacyjna.base.InjectedFragment
 class QuestionFragment : InjectedFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.question_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_question, container, false)
     }
 }
