@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,11 +12,11 @@
         android:id="@+id/learn_mode_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nauka" />
+        tools:text="@string/learn_mode" />
 
     <Button
         android:id="@+id/test_mode_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Test" />
+        tools:text="@string/test_mode" />
 </LinearLayout>
