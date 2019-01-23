@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">GraEdukacyjna</string>
+<<<<<<< HEAD
     <string name="captiol_question">Jaka jest stolica ...</string>
     <string name="learn_mode">Nauka</string>
     <string name="test_mode">Test</string>
     <string name="points">Punkty: </string>
+=======
+
+    <string name="learning_mode">Nauka</string>
+    <string name="test_mode">Test</string>
+>>>>>>> c511eee386ad997eee0ab1c9550268527f97c1a8
 </resources>

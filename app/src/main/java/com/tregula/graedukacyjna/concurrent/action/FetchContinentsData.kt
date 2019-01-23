@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.domain.concurrent.action
+package com.tregula.graedukacyjna.concurrent.action
 
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference

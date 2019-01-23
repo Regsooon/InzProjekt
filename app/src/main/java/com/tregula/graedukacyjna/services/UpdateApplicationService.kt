@@ -2,9 +2,9 @@ package com.tregula.graedukacyjna.services
 
 import android.app.IntentService
 import android.content.Intent
-import com.tregula.graedukacyjna.domain.concurrent.GameSchedulers
-import com.tregula.graedukacyjna.domain.concurrent.action.FetchContinentsData
-import com.tregula.graedukacyjna.domain.concurrent.action.PopulateDatabaseWithContinents
+import com.tregula.graedukacyjna.concurrent.GameSchedulers
+import com.tregula.graedukacyjna.concurrent.action.FetchContinentsData
+import com.tregula.graedukacyjna.concurrent.action.PopulateDatabaseWithContinents
 import dagger.android.AndroidInjection
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject

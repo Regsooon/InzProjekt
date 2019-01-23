@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.domain.concurrent
+package com.tregula.graedukacyjna.concurrent
 
 import io.reactivex.Scheduler
 

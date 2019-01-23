@@ -3,20 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center_vertical"
-    android:padding="10dp"
-    >
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/learn_mode_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         tools:text="@string/learn_mode" />
+=======
+        android:layout_margin="@dimen/small_margin"
+        android:text="@string/learning_mode" />
+>>>>>>> c511eee386ad997eee0ab1c9550268527f97c1a8
 
     <Button
         android:id="@+id/test_mode_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         tools:text="@string/test_mode" />
+=======
+        android:layout_margin="@dimen/small_margin"
+        android:text="@string/test_mode" />
+>>>>>>> c511eee386ad997eee0ab1c9550268527f97c1a8
 </LinearLayout>

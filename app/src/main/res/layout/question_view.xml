@@ -9,22 +9,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="1">
+        android:weightSum="2">
 
         <Button
             android:id="@+id/first_answear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="0.5"
+            android:layout_margin="@dimen/small_margin"
+            android:layout_weight="1"
             tools:text="Mediolan" />
 
         <Button
             android:id="@+id/second_answear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="0.5"
+            android:layout_margin="@dimen/small_margin"
+            android:layout_weight="1"
             tools:text="Paryż" />
 
     </LinearLayout>
@@ -33,22 +33,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="1">
+        android:weightSum="2">
 
         <Button
             android:id="@+id/third_answear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="0.5"
+            android:layout_margin="@dimen/small_margin"
+            android:layout_weight="1"
             tools:text="Warszawa" />
 
         <Button
             android:id="@+id/forth_answear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="0.5"
+            android:layout_margin="@dimen/small_margin"
+            android:layout_weight="1"
             tools:text="Moskwa" />
 
     </LinearLayout>
