@@ -8,17 +8,22 @@ import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.widget.Toolbar
-import androidx.fragment.app.Fragment
 import com.tregula.graedukacyjna.R
+import com.tregula.graedukacyjna.base.InjectedFragment
 import com.tregula.graedukacyjna.domain.view.data.ExternalLink
+import com.tregula.graedukacyjna.navigation.GameNavigation
+import javax.inject.Inject
 
-class WebBrowserFragment : Fragment() {
+class WebBrowserFragment : InjectedFragment() {
 
     private lateinit var webView: WebView
     private lateinit var toolbar: Toolbar
 
     private lateinit var title: String
     private lateinit var url: String
+
+    @Inject
+    lateinit var gameNavigation: GameNavigation
 
     companion object {
         private const val ARG_URL = "arg_url"
@@ -64,5 +69,8 @@ class WebBrowserFragment : Fragment() {
 
     private fun setupUi() {
         toolbar.title = title
+        toolbar.setNavigationOnClickListener {
+            gameNavigation.handleOnBackPress()
+        }
     }
 }

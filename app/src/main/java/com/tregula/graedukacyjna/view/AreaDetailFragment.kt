@@ -66,16 +66,16 @@ class AreaDetailFragment : InjectedFragment() {
         toolbar = view.findViewById(R.id.toolbar)
 
         childFragmentManager.beginTransaction()
-                .replace(R.id.map_container, MapFragment.newInstance(title, location))
-                .commitAllowingStateLoss()
+            .replace(R.id.map_container, MapFragment.newInstance(title, location))
+            .commitAllowingStateLoss()
         areaName.text = title
         areaName.setOnClickListener {
             gameNavigation.openWebBrowser(ExternalLink(url, title))
         }
+
         toolbar.setNavigationOnClickListener {
             gameNavigation.handleOnBackPress()
         }
-
     }
 
 }
