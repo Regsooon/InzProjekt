@@ -1,6 +1,8 @@
 package com.tregula.graedukacyjna.composition.module
 
 import com.tregula.graedukacyjna.question.QuestionFragment
+import com.tregula.graedukacyjna.view.AreaDetailFragment
+import com.tregula.graedukacyjna.view.WebBrowserFragment
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -10,4 +12,10 @@ abstract class FragmentBindingModule {
 
     @ContributesAndroidInjector
     abstract fun provideQuestionFragment(): QuestionFragment
+
+    @ContributesAndroidInjector
+    abstract fun providesAreaDetailFragment(): AreaDetailFragment
+
+    @ContributesAndroidInjector
+    abstract fun providesWebBrowserFragment(): WebBrowserFragment
 }
