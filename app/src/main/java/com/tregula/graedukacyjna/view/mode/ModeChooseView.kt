@@ -28,6 +28,5 @@ class ModeChooseView : LinearLayout {
         inflate(context, R.layout.mode_choose_view, this)
         learnMode = findViewById(R.id.learn_mode_button)
         testMode = findViewById(R.id.test_mode_button)
-
     }
 }
