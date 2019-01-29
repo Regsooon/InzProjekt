@@ -11,6 +11,10 @@ import javax.inject.Inject
 
 class UpdateApplicationService : IntentService(UpdateApplicationService::class.java.simpleName) {
 
+    companion object {
+        private const val MAXIMUM_RETRIES = 3L
+    }
+
     @Inject
     lateinit var fetchContinentsData: FetchContinentsData
     @Inject
@@ -28,9 +32,11 @@ class UpdateApplicationService : IntentService(UpdateApplicationService::class.j
     override fun onHandleIntent(intent: Intent?) {
         val fetchDisposable = fetchContinentsData.execute()
                 .subscribeOn(gameSchedulers.io())
+                .retry(MAXIMUM_RETRIES)
                 .flatMapCompletable { continentsJson ->
                     populateDatabaseWithContinents.execute(continentsJson)
-                }.subscribe()
+                }
+                .subscribe()
         subscribers.add(fetchDisposable)
     }
 
