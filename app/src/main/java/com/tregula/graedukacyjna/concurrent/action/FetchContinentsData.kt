@@ -32,7 +32,7 @@ class FetchContinentsData @Inject constructor(private val storage: FirebaseStora
                 } else {
                     emitter.onError(NullPointerException())
                 }
-            } catch (exception: IOException) {
+            } catch (exception: Exception) {
                 emitter.onError(exception)
             }
         }
