@@ -9,6 +9,12 @@ class FragmentNavigator @Inject constructor(activity: FragmentActivity) : Naviga
 
     private val fragmentManager = activity.supportFragmentManager
 
+    override fun startWith(page: Fragment) {
+        fragmentManager.beginTransaction()
+                .add(R.id.fragment_container, page)
+                .commitAllowingStateLoss()
+    }
+
     override fun navigateTo(page: Fragment) {
         val rootFrame = fragmentManager.findFragmentById(R.id.fragment_container)
 
