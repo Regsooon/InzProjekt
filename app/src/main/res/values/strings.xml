@@ -1,7 +1,10 @@
 <resources>
-    <string name="app_name">GraEdukacyjna</string>
+    <string name="app_name">Gra Edukacyjna</string>
 
-    <string name="learning_mode">Nauka</string>
-    <string name="test_mode">Test</string>
+    <string name="learning_mode">Tryb nauki</string>
+    <string name="test_mode">Tryb testu</string>
     <string name="details">Szczegóły</string>
+
+    <string name="author">Projekt Inżynierski Tomasza Reguły</string>
+    <string name="project_title">Edukacyjna gra mobilna do nauki stolic państw</string>
 </resources>
