@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="DesignColorPrimaryBackground">#004785</color>
+    <color name="DesignColorSecondaryBackground">#000000</color>
+    <color name="DesignColorButtonPrimary">#2293C7</color>
+    <color name="DesignColorText">#FFFFFF</color>
+    <color name="CorrectAnswer">#124912</color>
+    <color name="WrongAnswer">#B60404</color>
 </resources>

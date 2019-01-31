@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ModeChoose" />
+
+    <style name="ModeChoose.Container">
+        <item name="android:background">@color/DesignColorPrimaryBackground</item>
+    </style>
+
+    <style name="ModeChoose.Button">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:textColor">@color/DesignColorText</item>
+        <item name="android:backgroundTint">@color/DesignColorButtonPrimary</item>
+    </style>
+
+    <style name="ModeChoose.Text">
+        <item name="android:textColor">@color/DesignColorText</item>
+    </style>
+
+    <style name="ModeChoose.Text.Author">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="ModeChoose.Text.Title">
+        <item name="android:textSize">@dimen/text_extra_large</item>
+    </style>
+</resources>

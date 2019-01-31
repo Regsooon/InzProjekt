@@ -1,9 +1,9 @@
 package com.tregula.graedukacyjna.composition.module
 
-import com.tregula.graedukacyjna.question.QuestionFragment
+import com.tregula.graedukacyjna.presentation.question.QuestionFragment
 import com.tregula.graedukacyjna.view.AreaDetailFragment
 import com.tregula.graedukacyjna.view.WebBrowserFragment
-import com.tregula.graedukacyjna.view.mode.ModeFragment
+import com.tregula.graedukacyjna.presentation.mode.ModeFragment
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
