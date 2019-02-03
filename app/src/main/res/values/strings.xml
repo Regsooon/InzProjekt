@@ -4,7 +4,11 @@
     <string name="learning_mode">Tryb nauki</string>
     <string name="test_mode">Tryb testu</string>
     <string name="details">Szczegóły</string>
+    <string name="chose_continent">Wybór kontynentu</string>
+    <string name="loading_complete">Pobieranie danych zakończone</string>
 
     <string name="author">Projekt Inżynierski Tomasza Reguła</string>
     <string name="project_title">Edukacyjna gra mobilna do nauki stolic państw</string>
+
+    <string name="error_no_data">Błąd przy pobieraniu danych</string>
 </resources>

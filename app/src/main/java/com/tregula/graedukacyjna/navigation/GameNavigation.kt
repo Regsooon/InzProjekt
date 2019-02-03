@@ -8,6 +8,8 @@ interface GameNavigation {
 
     fun openWebBrowser(externalLink: ExternalLink)
 
+    fun openContinents()
+
     fun handleOnBackPress(): Boolean
 
 }
