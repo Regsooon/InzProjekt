@@ -20,11 +20,11 @@ class PopulateDatabaseWithContinents @Inject constructor(private val continentDa
         return Completable.create { emitter ->
             continentsJson.continents.forEach { continentJson ->
                 val continent = continentConverter.convert(continentJson)
-                val continentId = continentDao.insert(continent)
+                val id = continentDao.insert(continent)
 
                 val countries = continentJson.countries.map { countryJson ->
                     val country = countryConverter.convert(countryJson)
-                    country.continentId = continentId
+                    country.continentId = id
                     country
                 }
                 countryDao.insert(countries)

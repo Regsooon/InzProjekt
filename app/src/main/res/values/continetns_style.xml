@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Continents" />
+
+    <style name="Continents.Toolbar">
+        <item name="titleTextColor">@color/DesignColorText</item>
+        <item name="android:background">@color/DesignColorSecondaryBackground</item>
+        <item name="navigationIcon">@drawable/ic_left_arrow</item>
+    </style>
+
+    <style name="Continents.Container">
+        <item name="android:background">@color/DesignColorPrimaryBackground</item>
+    </style>
+
+    <style name="Continents.Item">
+        <item name="android:background">@color/DesignColorButtonPrimary</item>
+    </style>
+
+    <style name="Continents.Text">
+        <item name="android:textColor">@color/DesignColorText</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+</resources>

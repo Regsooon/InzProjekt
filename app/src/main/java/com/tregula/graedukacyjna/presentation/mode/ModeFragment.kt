@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import com.tregula.graedukacyjna.R
 import com.tregula.graedukacyjna.base.InjectedFragment
 import com.tregula.graedukacyjna.navigation.GameNavigation
+import com.tregula.graedukacyjna.presentation.continents.ContinentsFragment
 import javax.inject.Inject
 
 class ModeFragment : InjectedFragment() {
@@ -24,15 +25,11 @@ class ModeFragment : InjectedFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         modeChooseView = view.findViewById(R.id.mode_choose)
-        setupListeners()
-    }
-
-    private fun setupListeners(){
-        modeChooseView.learnMode.setOnClickListener {
-
+        modeChooseView.onLearnClick = {
+            gameNavigation.openContinents()
         }
-        modeChooseView.testMode.setOnClickListener {
-
+        modeChooseView.onTestClick = {
+            gameNavigation.openContinents()
         }
     }
 }
