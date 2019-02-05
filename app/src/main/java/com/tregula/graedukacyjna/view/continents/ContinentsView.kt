@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.presentation.continents
+package com.tregula.graedukacyjna.view.continents
 
 import android.content.Context
 import android.util.AttributeSet
@@ -10,11 +10,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.tregula.graedukacyjna.R
 import com.tregula.graedukacyjna.domain.data.ContinentData
-import com.tregula.graedukacyjna.presentation.continents.adapter.ContinentsAdapter
+import com.tregula.graedukacyjna.presentation.continents.ContinentsContract
+import com.tregula.graedukacyjna.view.continents.adapter.ContinentsAdapter
 
 class ContinentsView @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : ConstraintLayout(context, attrs, defStyleAttr), ContinentsContract.View {
+) : ConstraintLayout(context, attrs, defStyleAttr),
+    ContinentsContract.View {
 
     var onContinentClick: (ContinentData) -> Unit = {}
     var onNavigationBack: () -> Unit = {}

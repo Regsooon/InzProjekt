@@ -1,6 +1,7 @@
 package com.tregula.graedukacyjna.navigation
 
-import com.tregula.graedukacyjna.domain.view.data.ExternalLink
+import com.tregula.graedukacyjna.domain.data.mode.Mode
+import com.tregula.graedukacyjna.domain.view.ExternalLink
 
 interface GameNavigation {
 
@@ -8,7 +9,7 @@ interface GameNavigation {
 
     fun openWebBrowser(externalLink: ExternalLink)
 
-    fun openContinents()
+    fun openContinents(mode: Mode)
 
     fun handleOnBackPress(): Boolean
 

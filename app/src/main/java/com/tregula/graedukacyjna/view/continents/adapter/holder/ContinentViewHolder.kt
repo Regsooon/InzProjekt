@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.presentation.continents.adapter.holder
+package com.tregula.graedukacyjna.view.continents.adapter.holder
 
 import android.view.ViewGroup
 import android.widget.TextView

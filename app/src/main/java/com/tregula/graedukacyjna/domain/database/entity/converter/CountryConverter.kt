@@ -3,7 +3,7 @@ package com.tregula.graedukacyjna.domain.database.entity.converter
 import com.tregula.graedukacyjna.base.converter.Converter
 import com.tregula.graedukacyjna.domain.database.entity.Country
 import com.tregula.graedukacyjna.domain.database.entity.Location
-import com.tregula.graedukacyjna.domain.remote.data.CountryJson
+import com.tregula.graedukacyjna.domain.remote.CountryJson
 
 class CountryConverter(private val locationConverter: Converter<String, Location>) : Converter<CountryJson, Country> {
 

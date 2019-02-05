@@ -10,10 +10,10 @@ import androidx.appcompat.widget.Toolbar
 import com.tregula.graedukacyjna.R
 import com.tregula.graedukacyjna.base.InjectedFragment
 import com.tregula.graedukacyjna.domain.database.entity.Location
-import com.tregula.graedukacyjna.domain.view.data.AreaDetail
-import com.tregula.graedukacyjna.domain.view.data.ExternalLink
+import com.tregula.graedukacyjna.domain.view.AreaDetail
+import com.tregula.graedukacyjna.domain.view.ExternalLink
 import com.tregula.graedukacyjna.navigation.GameNavigation
-import com.tregula.graedukacyjna.view.map.MapFragment
+import com.tregula.graedukacyjna.presentation.map.MapFragment
 import javax.inject.Inject
 
 class AreaDetailFragment : InjectedFragment() {

@@ -7,12 +7,29 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.tregula.graedukacyjna.R
 import com.tregula.graedukacyjna.base.InjectedFragment
+import com.tregula.graedukacyjna.domain.data.mode.Mode
 import com.tregula.graedukacyjna.navigation.Navigator
+import com.tregula.graedukacyjna.view.continents.ContinentsView
 import javax.inject.Inject
 
 class ContinentsFragment : InjectedFragment() {
 
+    companion object {
+        private const val ARG_MODE = "arg_mode"
+
+        fun newInstance(mode: Mode): ContinentsFragment {
+            val bundle = Bundle().apply {
+                putSerializable(ARG_MODE, mode)
+            }
+
+            return ContinentsFragment().apply {
+                arguments = bundle
+            }
+        }
+    }
+
     private lateinit var continentsView: ContinentsView
+    private lateinit var mode: Mode
 
     @Inject
     lateinit var navigator: Navigator<Fragment>
@@ -29,11 +46,17 @@ class ContinentsFragment : InjectedFragment() {
 
         presenter.attach(continentsView)
         continentsView.onContinentClick = { continent ->
-            presenter.onContinentChosen(continent)
+            presenter.onContinentChosen(continent, mode)
         }
         continentsView.onNavigationBack = {
             navigator.handleOnBackPress()
         }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        mode = arguments?.getSerializable(ARG_MODE) as Mode
     }
 
     override fun onDestroy() {

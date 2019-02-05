@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.presentation.mode
+package com.tregula.graedukacyjna.view.mode
 
 import android.content.Context
 import android.util.AttributeSet

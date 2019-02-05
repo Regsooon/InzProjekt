@@ -10,7 +10,7 @@ import android.webkit.WebViewClient
 import androidx.appcompat.widget.Toolbar
 import com.tregula.graedukacyjna.R
 import com.tregula.graedukacyjna.base.InjectedFragment
-import com.tregula.graedukacyjna.domain.view.data.ExternalLink
+import com.tregula.graedukacyjna.domain.view.ExternalLink
 import com.tregula.graedukacyjna.navigation.GameNavigation
 import javax.inject.Inject
 

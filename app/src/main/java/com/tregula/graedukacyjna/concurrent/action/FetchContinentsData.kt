@@ -3,10 +3,9 @@ package com.tregula.graedukacyjna.concurrent.action
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.squareup.moshi.Moshi
-import com.tregula.graedukacyjna.domain.remote.data.ContinentsJson
+import com.tregula.graedukacyjna.domain.remote.ContinentsJson
 import io.reactivex.Single
 import io.reactivex.SingleEmitter
-import java.io.IOException
 import javax.inject.Inject
 
 class FetchContinentsData @Inject constructor(private val storage: FirebaseStorage,

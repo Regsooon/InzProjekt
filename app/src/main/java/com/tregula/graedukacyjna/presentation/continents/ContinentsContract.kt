@@ -1,6 +1,7 @@
 package com.tregula.graedukacyjna.presentation.continents
 
 import com.tregula.graedukacyjna.domain.data.ContinentData
+import com.tregula.graedukacyjna.domain.data.mode.Mode
 
 interface ContinentsContract {
 
@@ -13,7 +14,7 @@ interface ContinentsContract {
 
     interface Presenter {
 
-        fun onContinentChosen(continent: ContinentData)
+        fun onContinentChosen(continent: ContinentData, mode: Mode)
 
         fun attach(view: View)
 
