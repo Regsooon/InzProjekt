@@ -16,14 +16,13 @@ import com.tregula.graedukacyjna.view.continents.adapter.ContinentsAdapter
 class ContinentsView @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr),
-    ContinentsContract.View {
+        ContinentsContract.View {
 
     var onContinentClick: (ContinentData) -> Unit = {}
     var onNavigationBack: () -> Unit = {}
 
     private val toolbar: Toolbar
     private val recyclerView: RecyclerView
-    private val continentsAdapter = ContinentsAdapter(onContinentClick)
 
     init {
         View.inflate(context, R.layout.continents_view, this)
@@ -35,11 +34,12 @@ class ContinentsView @JvmOverloads constructor(
 
         recyclerView.apply {
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-            adapter = continentsAdapter
         }
     }
 
     override fun displayContinents(continents: List<ContinentData>) {
+        val continentsAdapter = ContinentsAdapter(onContinentClick)
+        recyclerView.adapter = continentsAdapter
         continentsAdapter.setItems(continents)
     }
 

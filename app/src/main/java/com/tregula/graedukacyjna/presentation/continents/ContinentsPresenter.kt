@@ -17,7 +17,9 @@ class ContinentsPresenter @Inject constructor(private val gameSchedulers: GameSc
     private val disposables: CompositeDisposable = CompositeDisposable()
 
     override fun onContinentChosen(continent: ContinentData, mode: Mode) {
-        //todo navigation
+        if (mode == Mode.LEARNING) {
+            gameNavigation.openCountries(continent)
+        }
     }
 
     override fun attach(view: ContinentsContract.View) {

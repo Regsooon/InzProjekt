@@ -1,24 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Continents" />
+    <style name="Land" />
 
-    <style name="Continents.Toolbar">
+    <style name="Land.Toolbar">
         <item name="titleTextColor">@color/DesignColorText</item>
         <item name="android:background">@color/DesignColorSecondaryBackground</item>
         <item name="navigationIcon">@drawable/ic_left_arrow</item>
     </style>
 
-    <style name="Continents.Container">
+    <style name="Land.Container">
         <item name="android:background">@color/DesignColorPrimaryBackground</item>
     </style>
 
-    <style name="Continents.Item">
+    <style name="Land.Item">
         <item name="android:background">@color/DesignColorButtonPrimary</item>
     </style>
 
-    <style name="Continents.Text">
+    <style name="Land.Card">
+        <item name="cardBackgroundColor">@color/DesignColorButtonPrimary</item>
+    </style>
+
+    <style name="Land.Text">
         <item name="android:textColor">@color/DesignColorText</item>
         <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Land.Text.Bold">
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

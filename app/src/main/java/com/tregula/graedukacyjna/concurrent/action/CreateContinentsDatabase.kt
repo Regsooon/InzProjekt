@@ -13,4 +13,5 @@ class CreateContinentsDatabase @Inject constructor(private val fetchContinentsDa
                     .subscribeOn(gameSchedulers.io())
                     .observeOn(gameSchedulers.io())
                     .flatMapCompletable { populateDatabase.execute(it) }
+                    .observeOn(gameSchedulers.main())
 }

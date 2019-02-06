@@ -29,7 +29,9 @@ class PopulateDatabaseWithContinents @Inject constructor(private val continentDa
                 }
                 countryDao.insert(countries)
             }
-            emitter.onComplete()
+            if (emitter.isDisposed.not()) {
+                emitter.onComplete()
+            }
         }
     }
 }
