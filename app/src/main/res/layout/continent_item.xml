@@ -29,7 +29,7 @@
 
     <TextView
         android:id="@+id/continent_name"
-        style="@style/Continents.Text"
+        style="@style/Land.Text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

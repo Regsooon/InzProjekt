@@ -2,6 +2,7 @@ package com.tregula.graedukacyjna.composition.module
 
 import com.tregula.graedukacyjna.composition.module.continents.ContinentsModule
 import com.tregula.graedukacyjna.presentation.continents.ContinentsFragment
+import com.tregula.graedukacyjna.presentation.countries.CountriesFragment
 import com.tregula.graedukacyjna.presentation.mode.ModeFragment
 import com.tregula.graedukacyjna.presentation.question.QuestionFragment
 import com.tregula.graedukacyjna.view.AreaDetailFragment
@@ -26,4 +27,7 @@ abstract class FragmentBindingModule {
 
     @ContributesAndroidInjector(modules = [ContinentsModule::class])
     abstract fun provideContinentsFragment(): ContinentsFragment
+
+    @ContributesAndroidInjector
+    abstract fun provideCountriesFragment(): CountriesFragment
 }

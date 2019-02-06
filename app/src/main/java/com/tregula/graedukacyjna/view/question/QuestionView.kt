@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.presentation.question
+package com.tregula.graedukacyjna.view.question
 
 import android.content.Context
 import android.util.AttributeSet

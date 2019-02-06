@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.domain.view.data
+package com.tregula.graedukacyjna.domain.view
 
 import com.tregula.graedukacyjna.domain.database.entity.Location
 

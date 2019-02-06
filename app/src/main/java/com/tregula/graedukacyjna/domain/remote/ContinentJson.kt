@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.domain.remote.data
+package com.tregula.graedukacyjna.domain.remote
 
 data class ContinentJson(val continent_name: String,
                          val continent_latitude: String,

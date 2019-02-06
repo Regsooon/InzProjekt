@@ -1,9 +1,9 @@
-package com.tregula.graedukacyjna.presentation.continents.adapter
+package com.tregula.graedukacyjna.view.continents.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.tregula.graedukacyjna.domain.data.ContinentData
-import com.tregula.graedukacyjna.presentation.continents.adapter.holder.ContinentViewHolder
+import com.tregula.graedukacyjna.view.continents.adapter.holder.ContinentViewHolder
 
 class ContinentsAdapter(private val onClick: (ContinentData) -> Unit) : RecyclerView.Adapter<ContinentViewHolder>() {
 

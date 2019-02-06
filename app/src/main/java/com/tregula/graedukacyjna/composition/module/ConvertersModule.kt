@@ -10,8 +10,8 @@ import com.tregula.graedukacyjna.domain.database.entity.Location
 import com.tregula.graedukacyjna.domain.database.entity.converter.ContinentConverter
 import com.tregula.graedukacyjna.domain.database.entity.converter.CountryConverter
 import com.tregula.graedukacyjna.domain.database.entity.converter.LocationConverter
-import com.tregula.graedukacyjna.domain.remote.data.ContinentJson
-import com.tregula.graedukacyjna.domain.remote.data.CountryJson
+import com.tregula.graedukacyjna.domain.remote.ContinentJson
+import com.tregula.graedukacyjna.domain.remote.CountryJson
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

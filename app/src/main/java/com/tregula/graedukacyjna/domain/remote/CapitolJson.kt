@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.domain.remote.data
+package com.tregula.graedukacyjna.domain.remote
 
 class CapitolJson(val capitol_name: String,
                   val capitol_latitude: String,

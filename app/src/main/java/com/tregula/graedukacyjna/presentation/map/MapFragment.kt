@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.view.map
+package com.tregula.graedukacyjna.presentation.map
 
 import android.os.Bundle
 
