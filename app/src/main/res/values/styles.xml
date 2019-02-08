@@ -5,4 +5,12 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="Common" />
+
+    <style name="Common.Toolbar">
+        <item name="titleTextColor">@color/DesignColorText</item>
+        <item name="android:background">@color/DesignColorSecondaryBackground</item>
+        <item name="navigationIcon">@drawable/ic_left_arrow</item>
+    </style>
+
 </resources>

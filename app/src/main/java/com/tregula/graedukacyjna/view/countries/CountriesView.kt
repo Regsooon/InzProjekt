@@ -24,6 +24,7 @@ class CountriesView @JvmOverloads constructor(
 
     private val recyclerView: RecyclerView
     private val toolbar: Toolbar
+    private val countryAdapter = CountryAdapter()
 
     init {
         View.inflate(context, R.layout.countries_view, this)
@@ -41,7 +42,7 @@ class CountriesView @JvmOverloads constructor(
     }
 
     fun displayCountries(countries: List<CountryData>) {
-        val countryAdapter = CountryAdapter(onCountryClick)
+        countryAdapter.onClick = onCountryClick
         recyclerView.adapter = countryAdapter
         countryAdapter.setItems(countries)
     }

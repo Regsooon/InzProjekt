@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import com.tregula.graedukacyjna.R
 import com.tregula.graedukacyjna.base.InjectedFragment
 import com.tregula.graedukacyjna.domain.data.ContinentData
+import com.tregula.graedukacyjna.domain.view.AreaDetail
 import com.tregula.graedukacyjna.navigation.GameNavigation
 import com.tregula.graedukacyjna.view.countries.CountriesView
 import javax.inject.Inject
@@ -42,6 +43,15 @@ class CountriesFragment : InjectedFragment() {
         countriesContainer = view.findViewById(R.id.container)
         countriesContainer.onNavigationBack = {
             gameNavigation.handleOnBackPress()
+        }
+        countriesContainer.onCountryClick = { countryData ->
+            val detail = AreaDetail(
+                    countryName = countryData.name,
+                    countryUrl = countryData.wiki,
+                    capitolName = countryData.capitol.name,
+                    capitolUrl = countryData.capitol.wiki,
+                    capitolLocation = countryData.capitol.location)
+            gameNavigation.openAreaDetail(detail)
         }
 
         continent?.let {

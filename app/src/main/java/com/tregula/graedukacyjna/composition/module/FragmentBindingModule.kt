@@ -5,8 +5,8 @@ import com.tregula.graedukacyjna.presentation.continents.ContinentsFragment
 import com.tregula.graedukacyjna.presentation.countries.CountriesFragment
 import com.tregula.graedukacyjna.presentation.mode.ModeFragment
 import com.tregula.graedukacyjna.presentation.question.QuestionFragment
-import com.tregula.graedukacyjna.view.AreaDetailFragment
-import com.tregula.graedukacyjna.view.WebBrowserFragment
+import com.tregula.graedukacyjna.presentation.AreaDetailFragment
+import com.tregula.graedukacyjna.presentation.WebBrowserFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
