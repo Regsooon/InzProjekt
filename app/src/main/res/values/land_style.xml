@@ -25,10 +25,13 @@
         <item name="android:textColor">@color/DesignColorText</item>
         <item name="android:textSize">@dimen/text_large</item>
         <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="Land.Text.Centered">
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="Land.Text.Bold">
+    <style name="Land.Text.Centered.Bold">
         <item name="android:textStyle">bold</item>
     </style>
 </resources>
