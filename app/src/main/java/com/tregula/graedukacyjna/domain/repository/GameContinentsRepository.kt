@@ -29,5 +29,5 @@ class GameContinentsRepository @Inject constructor(private val fetchContinentsDa
                         userPreferences.databaseCreationSuccess()
                         emitter.onComplete()
                     }
-                    .andThen(getContinentsData.execute())
+                    .andThen(fromLocalDatabase())
 }
