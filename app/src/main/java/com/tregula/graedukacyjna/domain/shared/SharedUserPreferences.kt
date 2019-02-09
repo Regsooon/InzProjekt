@@ -1,8 +1,9 @@
 package com.tregula.graedukacyjna.domain.shared
 
 import android.content.SharedPreferences
+import javax.inject.Inject
 
-class SharedUserPreferences(private val sharedPreferences: SharedPreferences) : UserPreferences {
+class SharedUserPreferences @Inject constructor(private val sharedPreferences: SharedPreferences) : UserPreferences {
 
     companion object {
         private const val DATABASE_KEY = "game_database_key"

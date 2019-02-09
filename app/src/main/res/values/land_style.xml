@@ -9,6 +9,12 @@
         <item name="navigationIcon">@drawable/ic_left_arrow</item>
     </style>
 
+    <style name="Land.Loading">
+        <item name="android:indeterminateTint">@color/DesignColorText</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateTintMode">src_atop</item>
+    </style>
+
     <style name="Land.Container">
         <item name="android:background">@color/DesignColorPrimaryBackground</item>
     </style>

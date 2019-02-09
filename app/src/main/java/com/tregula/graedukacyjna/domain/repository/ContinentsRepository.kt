@@ -5,5 +5,5 @@ import io.reactivex.Single
 
 interface ContinentsRepository {
 
-    fun getContinentsData(): Single<ContinentData>
+    fun getContinentsData(): Single<List<ContinentData>>
 }

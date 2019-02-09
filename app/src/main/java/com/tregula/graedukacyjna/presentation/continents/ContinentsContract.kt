@@ -7,6 +7,10 @@ interface ContinentsContract {
 
     interface View {
 
+        fun showLoading()
+
+        fun hideLoading()
+
         fun displayError()
 
         fun displayContinents(continents: List<ContinentData>)
