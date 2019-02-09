@@ -5,8 +5,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.tregula.graedukacyjna.domain.data.CountryData
 import com.tregula.graedukacyjna.view.countries.adapter.holder.CountryViewHolder
 
-class CountryAdapter(private val onClick: (CountryData) -> Unit) : RecyclerView.Adapter<CountryViewHolder>() {
+class CountryAdapter() : RecyclerView.Adapter<CountryViewHolder>() {
 
+    var onClick: (CountryData) -> Unit = {}
     private val items: MutableList<CountryData> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder =

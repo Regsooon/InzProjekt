@@ -11,12 +11,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_margin="15dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
 
         <TextView
             android:id="@+id/country_text"
-            style="@style/Land.Text.Bold"
+            style="@style/Land.Text.Centered.Bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -27,7 +27,7 @@
 
         <TextView
             android:id="@+id/capitol_text"
-            style="@style/Land.Text"
+            style="@style/Land.Text.Centered"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"

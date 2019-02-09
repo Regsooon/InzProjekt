@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CountryDetail.Container"
+    android:padding="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/country_text"
+        style="@style/CountryDetail.Text.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="6dp"
+        android:padding="6dp"
+        tools:text="Some country" />
+
+    <TextView
+        android:id="@+id/capitol_text"
+        style="@style/CountryDetail.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/country_text"
+        android:layout_alignParentStart="true"
+        android:layout_margin="6dp"
+        android:padding="6dp"
+        tools:text="Some capitol" />
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.tregula.graedukacyjna.view
+package com.tregula.graedukacyjna.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater

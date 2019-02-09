@@ -23,6 +23,7 @@ class ContinentsView @JvmOverloads constructor(
 
     private val toolbar: Toolbar
     private val recyclerView: RecyclerView
+    private val continentsAdapter = ContinentsAdapter()
 
     init {
         View.inflate(context, R.layout.continents_view, this)
@@ -38,7 +39,7 @@ class ContinentsView @JvmOverloads constructor(
     }
 
     override fun displayContinents(continents: List<ContinentData>) {
-        val continentsAdapter = ContinentsAdapter(onContinentClick)
+        continentsAdapter.onClick = onContinentClick
         recyclerView.adapter = continentsAdapter
         continentsAdapter.setItems(continents)
     }
