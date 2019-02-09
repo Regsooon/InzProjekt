@@ -3,6 +3,7 @@ package com.tregula.graedukacyjna.view.continents
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -23,12 +24,14 @@ class ContinentsView @JvmOverloads constructor(
 
     private val toolbar: Toolbar
     private val recyclerView: RecyclerView
+    private val progressBar: ProgressBar
     private val continentsAdapter = ContinentsAdapter()
 
     init {
         View.inflate(context, R.layout.continents_view, this)
         toolbar = findViewById(R.id.toolbar)
         recyclerView = findViewById(R.id.recycler)
+        progressBar = findViewById(R.id.progressBar)
         toolbar.setNavigationOnClickListener {
             onNavigationBack()
         }
@@ -36,6 +39,16 @@ class ContinentsView @JvmOverloads constructor(
         recyclerView.apply {
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         }
+    }
+
+    override fun showLoading() {
+        progressBar.visibility = View.VISIBLE
+        recyclerView.visibility = View.GONE
+    }
+
+    override fun hideLoading() {
+        progressBar.visibility = View.GONE
+        recyclerView.visibility = View.VISIBLE
     }
 
     override fun displayContinents(continents: List<ContinentData>) {
