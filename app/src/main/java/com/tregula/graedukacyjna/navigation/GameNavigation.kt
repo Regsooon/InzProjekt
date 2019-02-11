@@ -17,6 +17,8 @@ interface GameNavigation {
 
     fun openAreaDetail(detail: AreaDetail)
 
+    fun openQuestion(continent: ContinentData)
+
     fun handleOnBackPress(): Boolean
 
 }
