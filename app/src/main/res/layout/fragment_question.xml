@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
-
-    <com.tregula.graedukacyjna.view.ScoreView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    style="@style/Question.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/question_text"
+        style="@style/Question.Text.Capital"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/questions_container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="Something" />
 
     <com.tregula.graedukacyjna.view.question.QuestionView
+        android:id="@+id/questions_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question_text" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

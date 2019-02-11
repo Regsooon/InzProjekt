@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Question" />
+
+    <style name="Question.Container">
+        <item name="android:background">@color/DesignColorPrimaryBackground</item>
+    </style>
+
+    <style name="Question.Text">
+        <item name="android:textColor">@color/DesignColorText</item>
+    </style>
+
+    <style name="Question.Text.Capital">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_extra_large</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Question.Button">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:textColor">@color/DesignColorText</item>
+        <item name="android:backgroundTint">@color/DesignColorButtonPrimary</item>
+    </style>
+</resources>
