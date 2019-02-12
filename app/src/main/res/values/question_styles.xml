@@ -20,6 +20,7 @@
     <style name="Question.Button">
         <item name="android:textSize">@dimen/text_medium</item>
         <item name="android:textColor">@color/DesignColorText</item>
-        <item name="android:backgroundTint">@color/DesignColorButtonPrimary</item>
+        <item name="android:background">@color/DesignColorButtonPrimary</item>
+        <item name="android:gravity">center</item>
     </style>
 </resources>

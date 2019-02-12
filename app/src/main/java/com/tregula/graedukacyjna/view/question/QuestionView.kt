@@ -2,11 +2,10 @@ package com.tregula.graedukacyjna.view.question
 
 import android.content.Context
 import android.graphics.Color
-import android.graphics.PorterDuff
 import android.util.AttributeSet
 import android.view.View
-import android.widget.Button
-import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.tregula.graedukacyjna.R
 import com.tregula.graedukacyjna.domain.data.CapitolData
 import com.tregula.graedukacyjna.domain.data.test.Answer
@@ -15,16 +14,16 @@ import com.tregula.graedukacyjna.presentation.question.QuestionContract
 
 class QuestionView @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : LinearLayout(context, attrs, defStyleAttr), QuestionContract.View {
+) : ConstraintLayout(context, attrs, defStyleAttr), QuestionContract.View {
 
     var onAnswerClick: (capitol: CapitolData) -> Unit = {}
 
-    private val firstAnswer: Button
-    private val secondAnswer: Button
-    private val thirdAnswer: Button
-    private val forthAnswer: Button
+    private val firstAnswer: TextView
+    private val secondAnswer: TextView
+    private val thirdAnswer: TextView
+    private val forthAnswer: TextView
 
-    private val buttons: List<Button>
+    private val buttons: List<TextView>
 
     private var chosen: View? = null
 
@@ -50,8 +49,8 @@ class QuestionView @JvmOverloads constructor(
             it == chosen
         }?.let {
             when (answer) {
-                Answer.CORRECT -> it.background.setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY)
-                Answer.WRONG -> it.background.setColorFilter(Color.RED, PorterDuff.Mode.MULTIPLY)
+                Answer.CORRECT -> it.setBackgroundColor(Color.GREEN)
+                Answer.WRONG -> it.setBackgroundColor(Color.RED)
             }
         }
     }
@@ -64,7 +63,7 @@ class QuestionView @JvmOverloads constructor(
         }
     }
 
-    private fun Button.setupWithCapitol(capitol: CapitolData) {
+    private fun TextView.setupWithCapitol(capitol: CapitolData) {
         text = capitol.name
         setOnClickListener {
             chosen = it
