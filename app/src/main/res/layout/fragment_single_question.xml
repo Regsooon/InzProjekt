@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Something" />
 
-    <com.tregula.graedukacyjna.view.question.QuestionView
+    <com.tregula.graedukacyjna.view.question.SingleQuestionView
         android:id="@+id/questions_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"

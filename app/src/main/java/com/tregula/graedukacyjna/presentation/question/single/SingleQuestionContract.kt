@@ -1,12 +1,11 @@
-package com.tregula.graedukacyjna.presentation.question
+package com.tregula.graedukacyjna.presentation.question.single
 
 import com.tregula.graedukacyjna.domain.data.CapitolData
-import com.tregula.graedukacyjna.domain.data.ContinentData
 import com.tregula.graedukacyjna.domain.data.CountryData
 import com.tregula.graedukacyjna.domain.data.test.Answer
 import com.tregula.graedukacyjna.domain.data.test.Question
 
-interface QuestionContract {
+interface SingleQuestionContract {
 
     interface View {
 
@@ -20,7 +19,7 @@ interface QuestionContract {
 
     interface Presenter {
 
-        fun prepareData(country: CountryData, continentData: ContinentData)
+        fun prepareData(question: CountryData, answerPool: List<CountryData>)
 
         fun onAnswerChosen(capitolData: CapitolData)
 

@@ -10,11 +10,11 @@ import com.tregula.graedukacyjna.R
 import com.tregula.graedukacyjna.domain.data.CapitolData
 import com.tregula.graedukacyjna.domain.data.test.Answer
 import com.tregula.graedukacyjna.domain.data.test.Question
-import com.tregula.graedukacyjna.presentation.question.QuestionContract
+import com.tregula.graedukacyjna.presentation.question.single.SingleQuestionContract
 
-class QuestionView @JvmOverloads constructor(
+class SingleQuestionView @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : ConstraintLayout(context, attrs, defStyleAttr), QuestionContract.View {
+) : ConstraintLayout(context, attrs, defStyleAttr), SingleQuestionContract.View {
 
     var onAnswerClick: (capitol: CapitolData) -> Unit = {}
 

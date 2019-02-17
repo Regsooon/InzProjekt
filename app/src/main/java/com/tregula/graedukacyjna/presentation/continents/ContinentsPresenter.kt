@@ -19,7 +19,7 @@ class ContinentsPresenter @Inject constructor(private val gameSchedulers: GameSc
     override fun onContinentChosen(continent: ContinentData, mode: Mode) {
         when (mode) {
             Mode.LEARNING -> gameNavigation.openCountries(continent)
-            Mode.TEST -> gameNavigation.openQuestion(continent)
+            Mode.TEST -> gameNavigation.openQuestions(continent.countries)
         }
     }
 

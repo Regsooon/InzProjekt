@@ -34,7 +34,7 @@ class MapFragment : SupportMapFragment(), OnMapReadyCallback {
     override fun onCreate(bundle: Bundle?) {
         super.onCreate(bundle)
 
-        markerTitle = arguments?.getString(ARG_NAME) ?: ""
+        markerTitle = arguments?.getString(ARG_NAME).orEmpty()
         location = arguments?.getParcelable(ARG_LOCATION) ?: Location.DEFAULT
 
         getMapAsync(this)
