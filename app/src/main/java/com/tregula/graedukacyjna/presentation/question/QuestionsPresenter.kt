@@ -17,6 +17,7 @@ class QuestionsPresenter @Inject constructor(private val gameNavigation: GameNav
     companion object {
         private const val QUESTION_COUNT = 10
         private const val ANSWER_DELAY = 1L
+        private const val SCORE_MULTIPLIER = 100
     }
 
     private var view: QuestionsContract.View? = null
@@ -51,9 +52,19 @@ class QuestionsPresenter @Inject constructor(private val gameNavigation: GameNav
         answerMap[answeredQuestion.country] = answeredQuestion.answer
         val index = questions.indexOf(answeredQuestion.country)
         if (index == questions.lastIndex) {
-            gameNavigation.openScore(500)
+            gameNavigation.openScore(calculateScore())
         } else {
             view?.nextQuestion()
         }
+    }
+
+    private fun calculateScore(): Int {
+        val result = answerMap.values.map { answer ->
+            when (answer) {
+                Answer.CORRECT -> 1
+                Answer.WRONG -> 0
+            }
+        }.sum()
+        return result * SCORE_MULTIPLIER
     }
 }
