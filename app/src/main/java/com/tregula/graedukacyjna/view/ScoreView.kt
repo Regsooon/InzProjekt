@@ -2,28 +2,31 @@ package com.tregula.graedukacyjna.view
 
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.LinearLayout
+import android.view.View
+import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import com.tregula.graedukacyjna.R
 
-class ScoreView : LinearLayout {
+class ScoreView @JvmOverloads constructor(
+        context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : RelativeLayout(context, attrs, defStyleAttr) {
 
-    private lateinit var scoreText: TextView
+    var onNavigateBack: () -> Unit = {}
 
-    constructor(context: Context) : super(context) {
-        init(context)
+    private val score: TextView
+
+    init {
+        View.inflate(context, R.layout.score_view, this)
+        score = findViewById(R.id.score_label)
+
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        toolbar.setNavigationOnClickListener {
+            onNavigateBack()
+        }
     }
 
-    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
-        init(context)
-    }
-
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
-        init(context)
-    }
-
-    private fun init(context: Context) {
-        inflate(context, R.layout.score_view, this)
-        scoreText = findViewById(R.id.score_textView)
+    fun setScore(scoreResult: Int) {
+        score.text = context.getString(R.string.score, scoreResult.toString())
     }
 }

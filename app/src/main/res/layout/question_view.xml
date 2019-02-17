@@ -1,55 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@android:color/transparent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2">
+    <TextView
+        android:id="@+id/first_answer"
+        style="@style/Question.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/small_margin"
+        app:layout_constraintBottom_toTopOf="@id/third_answer"
+        app:layout_constraintEnd_toStartOf="@id/second_answer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Mediolan" />
 
-        <Button
-            android:id="@+id/first_answear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/small_margin"
-            android:layout_weight="1"
-            tools:text="Mediolan" />
+    <TextView
+        android:id="@+id/second_answer"
+        style="@style/Question.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/small_margin"
+        app:layout_constraintBottom_toTopOf="@id/forth_answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/first_answer"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Paryż" />
 
-        <Button
-            android:id="@+id/second_answear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/small_margin"
-            android:layout_weight="1"
-            tools:text="Paryż" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/third_answer"
+        style="@style/Question.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/small_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/forth_answer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_answer"
+        tools:text="Warszawa" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2">
+    <TextView
+        android:id="@+id/forth_answer"
+        style="@style/Question.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/small_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/third_answer"
+        app:layout_constraintTop_toBottomOf="@id/second_answer"
+        tools:text="Moskwa" />
 
-        <Button
-            android:id="@+id/third_answear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/small_margin"
-            android:layout_weight="1"
-            tools:text="Warszawa" />
-
-        <Button
-            android:id="@+id/forth_answear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/small_margin"
-            android:layout_weight="1"
-            tools:text="Moskwa" />
-
-    </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
