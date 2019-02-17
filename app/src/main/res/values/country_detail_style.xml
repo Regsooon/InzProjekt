@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CountryDetail" />
+
+    <style name="CountryDetail.Container">
+        <item name="android:background">@drawable/country_detail_background</item>
+    </style>
+
+    <style name="CountryDetail.Text">
+        <item name="android:drawableStart">@drawable/ic_wikipedia</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textColor">@color/DesignColorText</item>
+    </style>
+
+    <style name="CountryDetail.Text.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -5,9 +5,9 @@ import com.tregula.graedukacyjna.domain.database.dao.ContinentDao
 import com.tregula.graedukacyjna.domain.database.dao.CountryDao
 import com.tregula.graedukacyjna.domain.database.entity.Continent
 import com.tregula.graedukacyjna.domain.database.entity.Country
-import com.tregula.graedukacyjna.domain.remote.data.ContinentJson
-import com.tregula.graedukacyjna.domain.remote.data.ContinentsJson
-import com.tregula.graedukacyjna.domain.remote.data.CountryJson
+import com.tregula.graedukacyjna.domain.remote.ContinentJson
+import com.tregula.graedukacyjna.domain.remote.ContinentsJson
+import com.tregula.graedukacyjna.domain.remote.CountryJson
 import io.reactivex.Completable
 import javax.inject.Inject
 
@@ -20,16 +20,18 @@ class PopulateDatabaseWithContinents @Inject constructor(private val continentDa
         return Completable.create { emitter ->
             continentsJson.continents.forEach { continentJson ->
                 val continent = continentConverter.convert(continentJson)
-                val continentId = continentDao.insert(continent)
+                val id = continentDao.insert(continent)
 
                 val countries = continentJson.countries.map { countryJson ->
                     val country = countryConverter.convert(countryJson)
-                    country.continentId = continentId
+                    country.continentId = id
                     country
                 }
                 countryDao.insert(countries)
             }
-            emitter.onComplete()
+            if (emitter.isDisposed.not()) {
+                emitter.onComplete()
+            }
         }
     }
 }

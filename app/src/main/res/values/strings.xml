@@ -1,7 +1,24 @@
 <resources>
-    <string name="app_name">GraEdukacyjna</string>
+    <string name="app_name">Gra Edukacyjna</string>
 
-    <string name="learning_mode">Nauka</string>
-    <string name="test_mode">Test</string>
+    <string name="learning_mode">Tryb nauki</string>
+    <string name="test_mode">Tryb testu</string>
     <string name="details">Szczegóły</string>
+    <string name="chose_continent">Wybór kontynentu</string>
+    <string name="loading_complete">Pobieranie danych zakończone</string>
+    <string name="chose_country">Proszę wybrać kraj</string>
+    <string name="details_for">Szczegóły dla %1$s</string>
+    <string name="country_details">Szczegóły państwa: %1$s</string>
+    <string name="capitol_details">Szczegły stolicy: %1$s</string>
+    <string name="capitol">Stolica %1$s</string>
+    <string name="capitol_of_country">Stolicą państwa %s jest:</string>
+    <string name="quiz">Quiz</string>
+    <string name="congratulations">Gratulacje !</string>
+    <string name="score">Uzyskałeś %1$s puntktów !</string>
+    <string name="quiz_finish">Koniec quizu</string>
+
+    <string name="author">Projekt Inżynierski Tomasza Reguła</string>
+    <string name="project_title">Edukacyjna gra mobilna do nauki stolic państw</string>
+
+    <string name="error_no_data">Błąd przy pobieraniu danych</string>
 </resources>
