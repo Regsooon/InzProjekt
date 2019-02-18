@@ -18,7 +18,7 @@ import javax.inject.Inject
 class FragmentGameNavigation @Inject constructor(private val navigator: Navigator<Fragment>) : GameNavigation {
 
     companion object {
-        private val CONTINENTS_TAG = ContinentsFragment::class.java.simpleName
+        private val QUESTIONS_TAG = QuestionsFragment::class.java.simpleName
     }
 
     override fun openMainPage() =
@@ -28,10 +28,7 @@ class FragmentGameNavigation @Inject constructor(private val navigator: Navigato
             navigator.navigateTo(WebBrowserFragment.newInstance(externalLink))
 
     override fun openContinents(mode: Mode) =
-            when (mode) {
-                Mode.LEARNING -> navigator.navigateTo(ContinentsFragment.newInstance(mode))
-                Mode.TEST -> navigator.navigateTo(ContinentsFragment.newInstance(mode), CONTINENTS_TAG)
-            }
+            navigator.navigateTo(ContinentsFragment.newInstance(mode))
 
     override fun openCountries(continent: ContinentData) =
             navigator.navigateTo(CountriesFragment.newInstance(continent))
@@ -40,7 +37,7 @@ class FragmentGameNavigation @Inject constructor(private val navigator: Navigato
             navigator.navigateTo(AreaDetailFragment.newInstance(detail))
 
     override fun openQuestions(questionPool: List<CountryData>) =
-            navigator.navigateTo(QuestionsFragment.newInstance(questionPool))
+            navigator.navigateTo(QuestionsFragment.newInstance(questionPool), QUESTIONS_TAG)
 
     override fun openScore(score: Int) =
             navigator.navigateTo(ScoreFragment.newInstance(score))
